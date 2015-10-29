@@ -19,4 +19,16 @@ def hello():
 
 	db.session.commit()
 
+<<<<<<< HEAD
 	return "Entry added to db successfully."
+=======
+	a = Employee.query.filter_by(first_name = "harsha").all()
+
+	return str(len(a))
+
+@app.route('/lookup', method=['GET'])
+def lookup(lookup_code):
+	 product = db.session.query(Product).filter_by(ItemLookupCode = lookup_code).first()
+	 
+
+>>>>>>> a51ac2ef38a15a7ca3184155dbc89b36441c6cb1
